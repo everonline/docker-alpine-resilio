@@ -16,9 +16,24 @@
 - 8888 - Web Gui
 - 55555 - Listening Port For Sync Traffic
 
-# Run 
+# Run
 
-> docker run -d --name $name -p 8888:8888 -p 55555:55555 -v $datafolder:/mnt/sync:Z --restart on-failure resilio
+    DATA_FOLDER=/path/to/data/folder/on/the/host
+    WEBGUI_PORT=[ port to access the webgui on the host ]
 
-- chown -R 1000:1000 $datafolder (Host Folder)
-- :Z - SELinux Permission (CentOS 7 Host)
+    mkdir -p $DATA_FOLDER
+    chown -R 1000:1000 $DATA_FOLDER
+
+    docker run -d --name resilio \
+      -p $WEBUI_PORT:8888 -p 55555:55555 \
+      -v $DATA_FOLDER:/mnt/sync \
+      --restart on-failure \
+      tduk/resilio
+
+# CentOS 7 SELinux 
+
+    docker run -d --name resilio \
+      -p $WEBUI_PORT:8888 -p 55555:55555 \
+      -v $DATA_FOLDER:/mnt/sync:Z \
+      --restart on-failure \
+      tduk/resilio
