@@ -1,4 +1,4 @@
-# Docker image content
+# Docker Image Content
 
 - Alpine 3.9
 - dumb-init 1.2.2
