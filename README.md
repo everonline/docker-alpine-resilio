@@ -18,7 +18,7 @@
 
 # Run 
 
-docker run -d --name $name -p 8888:8888 -p 55555:55555 -v $datafolder:/mnt/sync:Z --restart on-failure resilio
+> docker run -d --name $name -p 8888:8888 -p 55555:55555 -v $datafolder:/mnt/sync:Z --restart on-failure resilio
 
-- chown 1000:1000 your $datafolder
-- :Z - If you use SELinux (CentOS 7)
+- chown -R 1000:1000 $datafolder (Host Folder)
+- :Z - SELinux Permission (CentOS 7 Host)
