@@ -9,9 +9,16 @@
 
 # Volume
 
-- /mnt/sync - State files and Sync folders
+- /mnt/sync - State Files / Sync Folders
 
 # Ports
 
 - 8888 - Web Gui
-- 55555 - Listening port For Sync Traffic
+- 55555 - Listening Port For Sync Traffic
+
+# Run 
+
+docker run -d --name $name -p 8888:8888 -p 55555:55555 -v $datafolder:/mnt/sync:Z --restart on-failure resilio
+
+- chown 1000:1000 your $datafolder
+- :Z - If you use SELinux (CentOS 7)
