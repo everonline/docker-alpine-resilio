@@ -5,4 +5,4 @@
 - glibc 2.28.r0
 - resilio-sync 2.6.3
 
-### For security Runs Under UID/GUI 1000:1000
+### For security Runs Under UID/GID 1000:1000
