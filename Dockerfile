@@ -2,7 +2,6 @@ FROM alpine:latest
 MAINTAINER TD <tiago@everonline.eu>
 
 ENV RESILIO_VERSION="2.6.3"
-ENV DUMB_INIT_VERSION="1.2.2"
 ENV GLIBC_VERSION="2.28-r0"
 
 # Add User
@@ -16,11 +15,8 @@ RUN \
   && TMP_APK='curl tar ca-certificates' \
   && apk --update upgrade \
   && apk add $TMP_APK \
-  && echo "Installing Dumb Init (${DUMB_INIT_VERSION})" \
-  && >&2 echo "dumb-init_${DUMB_INIT_VERSION}_amd64" \
-  && curl -#LOS https://github.com/Yelp/dumb-init/releases/download/v${DUMB_INIT_VERSION}/dumb-init_${DUMB_INIT_VERSION}_amd64 \
-  && mv dumb-init_${DUMB_INIT_VERSION}_amd64 /usr/local/bin/dumb-init \
-  && chmod +x /usr/local/bin/dumb-init \
+  && echo "Installing Dumb Init" \
+  && apk add dumb-init \
   && echo "Installing GLIBC (${GLIBC_VERSION})" \
   && >&2 echo "glibc-${GLIBC_VERSION}.apk" \
   && curl -#LOS https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VERSION}/glibc-${GLIBC_VERSION}.apk \
@@ -48,5 +44,5 @@ RUN chown -R resilio:resilio /mnt/sync/
 
 USER resilio
 
-ENTRYPOINT ["/usr/local/bin/dumb-init", "/entrypoint.sh"]
+ENTRYPOINT ["dumb-init", "/entrypoint.sh"]
 CMD ["--log", "--config", "/mnt/sync/sync.conf"]
