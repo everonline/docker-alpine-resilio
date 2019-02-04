@@ -25,7 +25,7 @@
     chown -R 1000:1000 $DATA_FOLDER
 
     docker run -d --name resilio \
-      -p $WEBUI_PORT:8888 -p 55555:55555 \
+      -p $WEBGUI_PORT:8888 -p 55555:55555 \
       -v $DATA_FOLDER:/mnt/sync \
       --restart on-failure \
       tduk/resilio
@@ -33,7 +33,7 @@
 # CentOS 7 SELinux 
 
     docker run -d --name resilio \
-      -p $WEBUI_PORT:8888 -p 55555:55555 \
+      -p $WEBGUI_PORT:8888 -p 55555:55555 \
       -v $DATA_FOLDER:/mnt/sync:Z \
       --restart on-failure \
       tduk/resilio
