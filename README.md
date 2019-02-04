@@ -20,7 +20,7 @@
 # Run
 
     DATA_FOLDER=/path/to/data/folder/on/the/host
-    WEBUI_PORT=[ port to access the webgui on the host ]
+    WEBUI_PORT=[ port to access the webui on the host ]
 
     mkdir -p $DATA_FOLDER
     chown -R 1000:1000 $DATA_FOLDER
