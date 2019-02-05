@@ -6,6 +6,7 @@
 - resilio-sync 2.6.3
 
 ### For security Runs Under UID/GID 1000:1000
+### Configuration Under Host Volume
 
 # Volume
 
