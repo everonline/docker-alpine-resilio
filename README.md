@@ -1,9 +1,9 @@
 # Docker Image Content
 
-- Alpine 3.11
+- Alpine 3.12
 - dumb-init 1.2.2-r1
 - glibc 2.28-r0
-- resilio-sync 2.6.4
+- resilio-sync 2.7.2
 
 ### For security Runs Under UID/GID 1000:1000
 ### Configuration Under Host Volume
