@@ -1,8 +1,8 @@
 FROM alpine:latest
 MAINTAINER TD <tiago@everonline.eu>
 
-ENV RESILIO_VERSION="2.7.2"
-ENV GLIBC_VERSION="2.33-r0"
+ENV RESILIO_VERSION="2.7.3"
+ENV GLIBC_VERSION="2.35-r0"
 
 # Add User
 
