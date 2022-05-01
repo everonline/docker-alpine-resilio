@@ -2,8 +2,8 @@
 
 - Alpine 3.13
 - dumb-init 1.2.2-r1
-- glibc 2.33-r0
-- resilio-sync 2.7.2
+- glibc 2.35-r0
+- resilio-sync 2.7.3
 
 ### For security Runs Under UID/GID 1000:1000
 ### Configuration Under Host Volume
