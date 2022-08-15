@@ -32,6 +32,7 @@ RUN \
   && apk del --purge $TMP_APK \
   && rm -rf /var/cache/apk/* \
   && rm -rf /tmp/*
+  && mkdir /mnt/sync
 
 COPY entrypoint.sh /
 COPY sync.conf /etc/
