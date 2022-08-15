@@ -31,7 +31,7 @@ RUN \
   && echo "Cleaning" \
   && apk del --purge $TMP_APK \
   && rm -rf /var/cache/apk/* \
-  && rm -rf /tmp/*
+  && rm -rf /tmp/* \
   && mkdir /mnt/sync
 
 COPY entrypoint.sh /
