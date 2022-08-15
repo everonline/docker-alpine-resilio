@@ -1,6 +1,6 @@
 # Docker Image Content
 
-- Alpine 3.13
+- Alpine 3.16
 - dumb-init 1.2.2-r1
 - glibc 2.35-r0
 - resilio-sync 2.7.3
@@ -28,13 +28,5 @@
     docker run -d --name resilio \
       -p $WEBUI_PORT:8888 -p 55555:55555 \
       -v $DATA_FOLDER:/mnt/sync \
-      --restart on-failure \
-      tduk/resilio
-
-# CentOS 8 SELinux 
-
-    docker run -d --name resilio \
-      -p $WEBUI_PORT:8888 -p 55555:55555 \
-      -v $DATA_FOLDER:/mnt/sync:Z \
       --restart on-failure \
       tduk/resilio
