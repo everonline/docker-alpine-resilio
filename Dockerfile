@@ -1,4 +1,4 @@
-FROM alpine:3.14
+FROM alpine:3.13
 MAINTAINER TD <tiago@everonline.eu>
 
 ENV RESILIO_VERSION="2.7.3"
