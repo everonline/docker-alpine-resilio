@@ -1,4 +1,4 @@
-FROM alpine:3.13
+FROM alpine:3.16
 MAINTAINER TD <tiago@everonline.eu>
 
 ENV RESILIO_VERSION="2.7.3"
@@ -40,7 +40,7 @@ RUN chmod +x /entrypoint.sh
 EXPOSE 8888 55555
 
 VOLUME /mnt/sync
-RUN chown -R resilio:resilio /mnt/sync/
+RUN chown -R resilio:resilio /mnt/sync
 
 USER resilio
 
