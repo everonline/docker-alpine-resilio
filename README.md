@@ -2,7 +2,7 @@
 
 - Alpine 3.16
 - dumb-init 1.2.2-r1
-- glibc 2.35-r0
+- glibc 2.35-r
 - resilio-sync 2.7.3
 
 ### For security Runs Under UID/GID 1000:1000
