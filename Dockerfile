@@ -39,8 +39,8 @@ RUN chmod +x /entrypoint.sh
 
 EXPOSE 8888 55555
 
-VOLUME [/mnt/sync]
-RUN chown -R resilio:resilio /mnt/sync
+VOLUME /sync
+RUN chown -R resilio:resilio /sync
 
 USER resilio
 
