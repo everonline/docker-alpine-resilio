@@ -30,7 +30,8 @@ RUN echo "Upgrading OS Installing Dependencies" && \
     echo "Cleaning" && \
     apk del --purge $TMP_APK && \
     rm -rf /var/cache/apk/* && \
-    rm -rf /tmp/*
+    rm -rf /tmp/* && \
+    mkdir -p /mnt/sync
 
 COPY entrypoint.sh /
 COPY sync.conf /etc/
