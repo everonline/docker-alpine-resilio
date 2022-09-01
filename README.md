@@ -1,7 +1,7 @@
 # Docker Image Content
 
 - Alpine 3.16
-- dumb-init 1.2.2-r1
+- dumb-init 1.2.5
 - glibc 2.34-r0
 - resilio-sync 2.7.3
 
