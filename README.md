@@ -1,6 +1,6 @@
 # Docker Image Content
 
-- Alpine 3.16
+- Alpine 3.16.2
 - dumb-init 1.2.5
 - glibc 2.34-r0
 - resilio-sync 2.7.3
@@ -14,7 +14,7 @@
 
 # Ports
 
-- 8888 - WebUI
+- 8888 - WebUI (HTTPS Forced on Configuration)
 - 55555 - Listening Port For Sync Traffic
 
 # Run
